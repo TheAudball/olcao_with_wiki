@@ -1,8 +1,7 @@
-# [Glossary](https://github.com/TheAudball/olcao_with_wiki/wiki/Glossary)
-- [Acronyms](https://github.com/TheAudball/olcao_with_wiki/wiki/Acronyms)
-- [glossary_list.py](https://github.com/TheAudball/olcao_with_wiki/wiki/glossary_list.py)
-- [Methods](https://github.com/TheAudball/olcao_with_wiki/wiki/Methods)
-- [Physical_Concepts](https://github.com/TheAudball/olcao_with_wiki/wiki/Physical_Concepts)
+# Overview
+- [Introduction](https://github.com/TheAudball/olcao_with_wiki/wiki/Introduction)
+- [Using_the_wiki](https://github.com/TheAudball/olcao_with_wiki/wiki/Using_the_wiki)
+- [Contributing_to_the_wiki](https://github.com/TheAudball/olcao_with_wiki/wiki/Contributing_to_the_wiki)
 
 
 # Reference_Manual
@@ -19,10 +18,11 @@
     - [Directory_Structure](https://github.com/TheAudball/olcao_with_wiki/wiki/Directory_Structure)
 
 
-# Overview
-- [Introduction](https://github.com/TheAudball/olcao_with_wiki/wiki/Introduction)
-- [Using_the_wiki](https://github.com/TheAudball/olcao_with_wiki/wiki/Using_the_wiki)
-- [Contributing_to_the_wiki](https://github.com/TheAudball/olcao_with_wiki/wiki/Contributing_to_the_wiki)
+# [Glossary](https://github.com/TheAudball/olcao_with_wiki/wiki/Glossary)
+- [Acronyms](https://github.com/TheAudball/olcao_with_wiki/wiki/Acronyms)
+- [glossary_list.py](https://github.com/TheAudball/olcao_with_wiki/wiki/glossary_list.py)
+- [Methods](https://github.com/TheAudball/olcao_with_wiki/wiki/Methods)
+- [Physical_Concepts](https://github.com/TheAudball/olcao_with_wiki/wiki/Physical_Concepts)
 
 
 
