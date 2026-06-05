@@ -20,11 +20,11 @@ permissions:
   contents: write
 
 env:
-  WIKI_DIR: wiki
+  WIKI_DIR: "wiki"
   # Folder holding the Compile*.py scripts (plus their helper modules).
   # Currently the scripts live in the repo root, so this is ".".
   # After moving them into a folder, change this to e.g. "scripts".
-  SCRIPTS_DIR: "."
+  SCRIPTS_DIR: "wiki_scripts"
 
 jobs:
   build-and-publish:
