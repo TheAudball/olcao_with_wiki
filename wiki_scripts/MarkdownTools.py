@@ -8,7 +8,7 @@ def GenerateLink(pageFile:str,repoName:str):
 def HtmlLink(pageFile:str,repoName:str):
     pageName = pageFile.replace('.md','')
     webLink = f"https://github.com/{repoName}/wiki/{pageName}"
-    displayName = pageName.replace('-',' ')
+    displayName = pageName.replace('_',' ')
     htmlLink = f'<a href="{webLink}">{displayName}</a>'
     return htmlLink
 
