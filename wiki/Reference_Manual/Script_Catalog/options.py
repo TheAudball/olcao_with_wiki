@@ -1,1 +1,1 @@
-options = {'dropdown': False, 'order': ['*'], 'title_level': 0, 'ordered': False}
+options = {'dropdown': True, 'order': ['uolcao','olcao','makeinput','*'], 'title_level': 0, 'ordered': True}
