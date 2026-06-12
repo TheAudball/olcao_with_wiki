@@ -8,7 +8,8 @@ on:
         required: false
         default: 'Manual update'
   push:
-    branches: [main]
+    branches: 
+      - main
     paths:
       - 'wiki/**'
       # When the compilers move into their own folder, add it here too so that
