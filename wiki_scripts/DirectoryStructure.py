@@ -1,11 +1,11 @@
 import os
 import sys
-import ast
+import yaml
 
 DEFAULT_OPTIONS = {"dropdown": False, "order": ["*"], "title_level": 0, "ordered":False}
 
 
-def buildDirStruct(rootPath:str,optionFileName:str="options.py"):
+def buildDirStruct(rootPath:str,optionFileName:str="options.yaml"):
     dirstruct = {"name":rootPath}
     directory = os.scandir(rootPath)
     entryList = []
@@ -26,23 +26,17 @@ def buildDirStruct(rootPath:str,optionFileName:str="options.py"):
     optionsPath = os.path.join(rootPath, optionFileName)
     if os.path.exists(optionsPath):
         with open(optionsPath) as f:
-            module = ast.parse(f.read())
-        options = {}
-        for node in module.body:
-            if (isinstance(node, ast.Assign)
-                    and any(isinstance(t, ast.Name) and t.id == "options"
-                            for t in node.targets)):
-                options = ast.literal_eval(node.value)
-        # fill in any keys missing from DEFAULT_OPTIONS without overriding
-        # the values the file already defines, and persist if anything changed
+            options = yaml.safe_load(f)
+        if not isinstance(options, dict):
+            options = {}
         merged = {**DEFAULT_OPTIONS, **options}
         if merged != options:
             with open(optionsPath, "w") as f:
-                f.write(f"options = {merged!r}\n")
+                yaml.safe_dump(merged, f, sort_keys=False)
         dirstruct["options"] = merged
     else:
         with open(optionsPath, "w") as f:
-            f.write(f"options = {DEFAULT_OPTIONS!r}\n")
+            yaml.safe_dump(dict(DEFAULT_OPTIONS), f, sort_keys=False)
         dirstruct["options"] = dict(DEFAULT_OPTIONS)
 
     dirstruct["entries"] = OrderEntries(dirstruct["entries"],
